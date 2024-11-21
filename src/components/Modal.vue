@@ -32,7 +32,7 @@ export default defineComponent({
     },
     emits: ['close-modal'],
 
-  setup(props, { emit }) {
+  setup(props?, { emit }) {
     const closeModal = () => {
        emit('close-modal')
     }
