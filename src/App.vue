@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-4 bg-cyan-500 w-full p-10  text-center">Pokédex</h1>
+    <h1 class="text-4xl font-bold mb-4 bg-cyan-500 rounded-full shadow-lg w-full p-10  text-center">Pokédex</h1>
 
     <div v-if="loading" class="flex justify-center">
       <VueSpinner size="100" color="cyan" />
@@ -19,6 +19,7 @@
 </template>
 
 <script lang="ts">
+//los componentes y funciones para manejar los datos suministrados por la api
 import { defineComponent, ref, onMounted } from 'vue';
 import PokemonCard from './components/Cards.vue';
 import PokemonModal from './components/Modal.vue';
@@ -27,12 +28,14 @@ import PokemonService from './services/RecipeServices';
 import {VueSpinner} from 'vue3-spinners';
 
 export default defineComponent({
+  //renderización de los componentes
   components: {
     VueSpinner,
     PokemonCard,
     PokemonModal
 
   },
+  //definicion de funciones y callbacks
   setup() {
     const pokemons = ref<Pokemon[]>([]);
     const loading = ref(true);
@@ -49,7 +52,7 @@ export default defineComponent({
         selectedPokemon.value = null
     }
 
-
+ // definicion de funciones para cargar los datos de el servicio y hacr la animación de carga y un tray catch para el manejo de errores
     const fetchPokemons = async () => {
       try {
         loading.value = true;
