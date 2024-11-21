@@ -1,6 +1,6 @@
 <template>
   <div v-if="show" class="fixed  inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
-    <div class="bg-slate-300 rounded-lg p-8 w-96">
+    <div class="bg-slate-100 rounded-lg p-8 w-96">
       <button @click="closeModal" class="top-2 right-2 text-slate-100 hover:text-red-700 bg-slate-900 hover:bg-slate-200 pl-5 py-3 pr-5 rounded-full shadow-xl">X</button>
       <img :src="pokemon?.sprites.front_default" :alt="pokemon?.name" class="w-full h-auto mb-4">
       <div class="transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out bg-slate-50 hover:bg-slate-100 shadow-xl font-bold py-2 px-4 rounded">
