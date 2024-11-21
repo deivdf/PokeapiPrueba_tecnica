@@ -10,3 +10,5 @@ para instalar todas las dependencias instaladas:
 npm install
 para ejecutar la aplicación: 
 npm run dev
+para evitar problemas de compativilidad tener instalada la vercion de node
+node v20.17.0
