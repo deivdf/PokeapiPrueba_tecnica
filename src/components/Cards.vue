@@ -7,7 +7,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import type { Pokemon } from '../types/type'; // Importa el tipo
+// Importa el tipo
+import type { Pokemon } from '../types/type'; 
 
 export default defineComponent({
   props: {
@@ -19,7 +20,8 @@ export default defineComponent({
   emits: ['open-modal'],
   setup(props, { emit }) {
     const openModal = () => {
-      emit('open-modal', props.pokemon); // Emite el pokemon al padre
+      // Emite el pokemon al padre
+      emit('open-modal', props.pokemon); 
     };
 
     return {

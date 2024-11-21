@@ -3,7 +3,8 @@ import axios from 'axios';
 import { PokemonSchema, type Pokemon } from '../types/type';
 
 class PokemonService {
-  async getPokemons(limit: number = 20): Promise<Pokemon[]> {
+  //por cuestion de la api viene limitada la cantidad de pokemones
+  async getPokemons(limit: number = 55): Promise<Pokemon[]> {
     try {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
       const results = response.data.results;
