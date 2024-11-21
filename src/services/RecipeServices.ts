@@ -1,4 +1,4 @@
-// src/services/PokemonService.ts
+// se instala axios para manejar las consultas http
 import axios from 'axios';
 import { PokemonSchema, type Pokemon } from '../types/type';
 
