@@ -32,7 +32,8 @@ export default defineComponent({
     },
     emits: ['close-modal'],
 
-  setup(props?, { emit }) {
+  setup(props, { emit }) {
+    console.log(props.pokemon)
     const closeModal = () => {
        emit('close-modal')
     }
